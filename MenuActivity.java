@@ -4,9 +4,9 @@ import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
-import android.util.Log;
 import android.view.View;
-import android.widget.TextView;
+
+import com.koreait.first.ch07.BookPersonActivity;
 
 public class MenuActivity extends AppCompatActivity {
 
@@ -17,6 +17,7 @@ public class MenuActivity extends AppCompatActivity {
     }
     public void moveToActivity(View v){
         int id = v.getId();
+        // Log.i("myLog", String.valueOf(id));
         Class c = null;
         //분기
         if(id == R.id.menuBtn1){
@@ -25,15 +26,20 @@ public class MenuActivity extends AppCompatActivity {
             c = LinearActivity.class;
         } else if(id == R.id.menuBtn3){
             c = ConstraintActivity.class;
+        } else if(id == R.id.menuBtn4){
+            c = WriteActivity.class;
+        } else if(id == R.id.menuBtn5){
+            c = BookPersonActivity.class;
         }
         Intent intent = new Intent(this, c);
         startActivity(intent);
     }
     // 참고용, id 값으로 구분하지않을 때
+    /*
     public void moveToActivityWithText(View v){
         TextView tv = (TextView)v;
         String text = (String)tv.getText();
-        Log.i("myLog", text);
+
         // 분기
         Class c = null;
         switch (text){
@@ -50,9 +56,10 @@ public class MenuActivity extends AppCompatActivity {
         Intent intent = new Intent(this, c);
         startActivity(intent);
     }
+    */
     public void call(View v){
         //네이버 Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse("http://m.naver.com"));
-        Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse("tel:010-1111-2222"));
+        Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse("tel:000-0000-0000"));
         startActivity(intent);
     }
 
