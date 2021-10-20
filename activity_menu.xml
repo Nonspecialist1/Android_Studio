@@ -51,7 +51,30 @@
             android:layout_height="wrap_content"
             android:onClick="moveToActivity"
             android:text="Person" />
+
+        <Button
+            android:id="@+id/menuBtn6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="moveToActivity"
+            android:text="Image" />
+
+        <Button
+            android:id="@+id/menuBtn7"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="moveToActivity"
+            android:text="Picsum" />
     </TableRow>
 
+    <TableRow>
+    <Button
+        android:id="@+id/menuBtn8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="moveToActivity"
+        android:text="Movie" />
+
+    </TableRow>
 
 </TableLayout>

@@ -1,12 +1,14 @@
 package com.koreait.first;
 
-import android.support.v7.app.AppCompatActivity;
+
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
-import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import androidx.appcompat.app.AppCompatActivity;
+
 /*
 MVC 패턴 , 기능별로 분리해서 관리하는 것
 M : Model (Data) - 클래스 안에 맴버필드랑 setter, getter만 있는애들

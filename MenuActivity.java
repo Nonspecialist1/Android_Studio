@@ -3,10 +3,13 @@ package com.koreait.first;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 
+import androidx.appcompat.app.AppCompatActivity;
+
 import com.koreait.first.ch07.BookPersonActivity;
+import com.koreait.first.ch10.DailyBoxofficeActivity;
+import com.koreait.first.picsum.PicsumActivity;
 
 public class MenuActivity extends AppCompatActivity {
 
@@ -30,6 +33,12 @@ public class MenuActivity extends AppCompatActivity {
             c = WriteActivity.class;
         } else if(id == R.id.menuBtn5){
             c = BookPersonActivity.class;
+        } else if(id == R.id.menuBtn6){
+            c = ImageViewActivity.class;
+        } else if(id == R.id.menuBtn7){
+            c = PicsumActivity.class;
+        } else if(id == R.id.menuBtn8){
+            c = DailyBoxofficeActivity.class;
         }
         Intent intent = new Intent(this, c);
         startActivity(intent);
