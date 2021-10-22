@@ -68,12 +68,19 @@
     </TableRow>
 
     <TableRow>
-    <Button
-        android:id="@+id/menuBtn8"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:onClick="moveToActivity"
-        android:text="Movie" />
+        <Button
+            android:id="@+id/menuBtn8"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="moveToActivity"
+            android:text="일별영화순위" />
+
+        <Button
+            android:id="@+id/menuBtn9"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="moveToActivity"
+            android:text="주간영화순위" />
 
     </TableRow>
 

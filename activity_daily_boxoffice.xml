@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".ch10.DailyBoxofficeActivity">
+    tools:context=".ch10.DailyOfficeActivity">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -31,6 +31,8 @@
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rvList"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        android:orientation="vertical"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1" />

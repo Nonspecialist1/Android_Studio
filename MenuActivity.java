@@ -7,8 +7,10 @@ import android.view.View;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.google.android.material.snackbar.Snackbar;
 import com.koreait.first.ch07.BookPersonActivity;
-import com.koreait.first.ch10.DailyBoxofficeActivity;
+import com.koreait.first.ch10.DailyOfficeActivity;
+import com.koreait.first.ch10.WeeklyBoxOfficeActivity;
 import com.koreait.first.picsum.PicsumActivity;
 
 public class MenuActivity extends AppCompatActivity {
@@ -17,6 +19,7 @@ public class MenuActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_menu);
+
     }
     public void moveToActivity(View v){
         int id = v.getId();
@@ -38,8 +41,16 @@ public class MenuActivity extends AppCompatActivity {
         } else if(id == R.id.menuBtn7){
             c = PicsumActivity.class;
         } else if(id == R.id.menuBtn8){
-            c = DailyBoxofficeActivity.class;
+            c = DailyOfficeActivity.class;
+        } else if(id == R.id.menuBtn9){
+            c = WeeklyBoxOfficeActivity.class;
         }
+
+        if(c == null){
+            Snackbar.make(v, "준비중입니다.", Snackbar.LENGTH_SHORT).show();
+            return;
+        }
+
         Intent intent = new Intent(this, c);
         startActivity(intent);
     }
